@@ -62,8 +62,21 @@ $white:             #fff;
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
 
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+$very-dark-gray:    #222;
+$resene-nero:       #252525;
+$gm-dark-gray:      #292929;
+$dark-gray:         #333;
+$medium-dark-gray:  #444;
+$davys-grey:        #555;
+$light-gray:        #aaa;
+$ford-silver:       #ccc;
+$green:             #85c630;
+$light-green:       #a7e05e;
+
+$link-color:        $light-gray;
+$link-hover:        $light-green;
+
+$alt-hover:         $green;
 
 /*
 Here's a great tutorial on how to
@@ -76,8 +89,8 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:        Arial,Verdana,sans-serif;
+$serif:             Georgia,"Times New Roman",Times,serif;
 
 
 /* 	To embed your own fonts, use this syntax
@@ -203,35 +216,32 @@ BUTTONS
 *********************/
 
 .button, .button:visited {
-	font-family: $sans-serif;
-	border: 1px solid darken($link-color, 13%);
-	border-top-color: darken($link-color, 7%);
-	border-left-color: darken($link-color, 7%);
-	padding: 4px 12px;
-	color: $white;
-	display: inline-block;
-	font-size: 11px;
-	font-weight: bold;
-	text-decoration: none;
-	text-shadow: 0 1px rgba(0,0,0, .75);
-	cursor: pointer;
-	margin-bottom: 20px;
-	line-height: 21px;
-	border-radius: 4px;
-	@include css-gradient($link-color, darken($link-color, 5%));
+  font-family: $sans-serif;
+  border: 1px solid darken($link-color, 13%);
+  border-top-color: darken($link-color, 7%);
+  border-left-color: darken($link-color, 7%);
+  padding: 4px 12px;
+  color: $white;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  @include css-gradient($link-color, darken($link-color, 5%));
 
+  &:hover, &:focus {
+    color: $white;
+    border: 1px solid darken($link-color, 13%);
+    border-top-color: darken($link-color, 20%);
+    border-left-color: darken($link-color, 20%);
+    @include css-gradient(darken($link-color, 5%), darken($link-color, 10%));
+  }
 
-	&:hover, &:focus {
-		color: $white;
-	  	border: 1px solid darken($link-color, 13%);
-	  	border-top-color: darken($link-color, 20%);
-	 	border-left-color: darken($link-color, 20%);
-		@include css-gradient(darken($link-color, 5%), darken($link-color, 10%));
-	}
-
-	&:active {
-		@include css-gradient(darken($link-color, 5%), $link-color);
-	}
+  &:active {
+    @include css-gradient(darken($link-color, 5%), $link-color);
+  }
 }
 
 .blue-button, .blue-button:visited {

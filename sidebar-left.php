@@ -1,4 +1,4 @@
-<div class="sidebar fivecol last clearfix" role="complementary">
+<div class="sidebar fivecol first clearfix" role="complementary">
  <div class="sidebar-top">
   <?php if ( is_active_sidebar( 'sidebar-top' ) ) : ?>
 
