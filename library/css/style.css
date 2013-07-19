@@ -841,7 +841,7 @@ GENERAL STYLES
 *********************/
 /* line 20, ../scss/_base.scss */
 body {
-  background-color: #1a1b1b;
+  background: #1a1b1b url("../images/bg.png");
   font-family: Arial, Verdana, sans-serif;
   font-size: 100%;
   line-height: 1.5;
@@ -2044,6 +2044,10 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
   
   ******************************************************************/
+  /* line 12, ../scss/_1240up.scss */
+  #container {
+    background: transparent url("../images/cover.png") 50% 36px no-repeat;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)
