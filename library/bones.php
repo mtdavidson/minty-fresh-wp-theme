@@ -468,4 +468,20 @@ function bones_get_the_author_posts_link() {
     return $link;
 }
 
+function your_get_comment_author_link () {
+    global $comment;
+
+    if ($comment->user_id == '0') {
+        if (!empty ($comment->comment_author_url)) {
+            $url = $comment->comment_author_url;
+        } else {
+            $url = '#';
+        }
+    } else {
+        $url = get_author_posts_url($comment->user_id);
+    }
+
+    echo "<a href=\"" . $url . "\">" .get_comment_author () . "</a>";
+}
+
 ?>

@@ -10,7 +10,7 @@
 
       <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-        <header class="article-header">
+        <header class="article-header first elevencol">
 
           <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
           <p class="byline vcard"><?php
@@ -18,14 +18,23 @@
                                   ?></p>
 
         </header> <!-- end article header -->
+        <div class="onecol last">
+          <span class="meta comments">
+            <?php if ( post_password_required() ) : ?>
+            <span class="c"><em>X</em></span>
+                            <?php else:
+comments_popup_link('<span class="n"><em>' . __('0', 'lb-lang') . '</em></span>', '<span class="y"><em>' . __('1', 'lb-lang') . '</em></span>', '<span class="y"><em>' . __('%', 'lb-lang') . '</em></span>', '', '<span class="c"><em>' .  __('No', 'lb-lang') . '</em></span>' );
+                            endif;?>
+          </span>
+        </div>
 
-        <section class="entry-content clearfix">
+        <section class="entry-content clearfix clear">
           <?php the_content(); ?>
         </section> <!-- end article section -->
 
         <footer class="article-footer">
+          <p class="posted_in"><?php echo __('Posted in: ', 'bonestheme'); the_category(', '); ?></p>
           <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>
-
         </footer> <!-- end article footer -->
 
         <?php // comments_template(); // uncomment if you want to use them ?>
@@ -34,7 +43,7 @@
 
                             <?php endwhile; ?>
 
-                            <?php else : ?>
+      <?php else : ?>
 
       <article id="post-not-found" class="hentry clearfix">
         <header class="article-header">
@@ -48,7 +57,7 @@
         </footer>
       </article>
 
-      <?php endif; ?>
+            <?php endif; ?>
 
     </div> <!-- end #main -->
 

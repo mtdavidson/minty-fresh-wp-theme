@@ -15,9 +15,15 @@ remember less is more.
 
 ******************************************************************/
 
+@import "compass/typography/text/replacement";
+
 /*********************
 CLEARFIXIN'
 *********************/
+
+.clear {
+  clear: both;
+}
 
 // Contain floats: nicolasgallagher.com/micro-clearfix-hack/
 .clearfix {
