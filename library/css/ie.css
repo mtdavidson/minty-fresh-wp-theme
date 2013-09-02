@@ -107,53 +107,53 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 126, ../scss/_mixins.scss */
+/* line 127, ../scss/_mixins.scss */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
 }
 
-/* line 132, ../scss/_mixins.scss */
+/* line 133, ../scss/_mixins.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 133, ../scss/_mixins.scss */
+/* line 134, ../scss/_mixins.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 134, ../scss/_mixins.scss */
+/* line 135, ../scss/_mixins.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 138, ../scss/_mixins.scss */
+/* line 139, ../scss/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 144, ../scss/_mixins.scss */
+/* line 145, ../scss/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 150, ../scss/_mixins.scss */
+/* line 151, ../scss/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 156, ../scss/_mixins.scss */
+/* line 157, ../scss/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 162, ../scss/_mixins.scss */
+/* line 163, ../scss/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -183,7 +183,7 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 224, ../scss/_mixins.scss */
+/* line 225, ../scss/_mixins.scss */
 .button, .button:visited {
   font-family: Arial, Verdana, sans-serif;
   border: 1px solid #898989;
@@ -205,7 +205,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #aaaaaa, #9d9d9d);
   background-image: linear-gradient(to bottom, #aaaaaa, #9d9d9d);
 }
-/* line 240, ../scss/_mixins.scss */
+/* line 241, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid #898989;
@@ -218,7 +218,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #9d9d9d, #909090);
   background-image: linear-gradient(to bottom, #9d9d9d, #909090);
 }
-/* line 248, ../scss/_mixins.scss */
+/* line 249, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   background-color: #aaaaaa;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9d9d9d), to(#aaaaaa));
@@ -228,7 +228,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #9d9d9d, #aaaaaa);
 }
 
-/* line 253, ../scss/_mixins.scss */
+/* line 254, ../scss/_mixins.scss */
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
   text-shadow: 0 1px 1px #1472ad;
@@ -240,7 +240,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
   box-shadow: inset 0 0 3px #59b3ec;
 }
-/* line 259, ../scss/_mixins.scss */
+/* line 260, ../scss/_mixins.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #116396;
   background-color: #1472ad;
@@ -250,7 +250,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1784c9, #1472ad);
   background-image: linear-gradient(to bottom, #1784c9, #1472ad);
 }
-/* line 263, ../scss/_mixins.scss */
+/* line 264, ../scss/_mixins.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -266,109 +266,140 @@ Author:
 
 Stylesheet: Grid Stylesheet
 
-I've seperated the grid so you can swap it out easily. It's
-called at the top the style.scss stylesheet.
-
-There are a ton of grid solutions out there. You should definitely
-experiment with your own. Here are some recommendations:
-
-http://gridsetapp.com - Love this site. Responsive Grids made easy.
-http://susy.oddbird.net/ - Grids using Compass. Very elegant.
-http://gridpak.com/ - Create your own responsive grid.
-
-The grid below is a combination of the 1140 grid and Twitter Boostrap. 
-I liked 1140 but Boostrap's grid was way more detailed so I merged them 
-together, let's see how this works out. If you want to use 1140, the original 
-values are commented out on each line.
+Using http://susy.oddbird.net/
 
 ******************************************************************/
-/* line 24, ../scss/_grid.scss */
+/* line 16, ../scss/_grid.scss */
 .onecol {
-  width: 5.801104972%;
-}
-
-/* 4.85%;  } /* grid_1  */
-/* line 25, ../scss/_grid.scss */
-.twocol {
-  width: 14.364640883%;
-}
-
-/* 13.45%; } /* grid_2  */
-/* line 26, ../scss/_grid.scss */
-.threecol {
-  width: 22.928176794%;
-}
-
-/* 22.05%; } /* grid_3  */
-/* line 27, ../scss/_grid.scss */
-.fourcol {
-  width: 31.491712705%;
-}
-
-/* 30.75%; } /* grid_4  */
-/* line 28, ../scss/_grid.scss */
-.fivecol {
-  width: 40.055248616%;
-}
-
-/* 39.45%; } /* grid_5  */
-/* line 29, ../scss/_grid.scss */
-.sixcol {
-  width: 48.618784527%;
-}
-
-/* 48%;    } /* grid_6  */
-/* line 30, ../scss/_grid.scss */
-.sevencol {
-  width: 57.182320438000005%;
-}
-
-/* 56.75%; } /* grid_7  */
-/* line 31, ../scss/_grid.scss */
-.eightcol {
-  width: 65.74585634900001%;
-}
-
-/* 65.4%;  } /* grid_8  */
-/* line 32, ../scss/_grid.scss */
-.ninecol {
-  width: 74.30939226%;
-}
-
-/* 74.05%; } /* grid_9  */
-/* line 33, ../scss/_grid.scss */
-.tencol {
-  width: 82.87292817100001%;
-}
-
-/* 82.7%;  } /* grid_10 */
-/* line 34, ../scss/_grid.scss */
-.elevencol {
-  width: 91.436464082%;
-}
-
-/* 91.35%; } /* grid_11 */
-/* line 35, ../scss/_grid.scss */
-.twelvecol {
-  width: 99.999999993%;
-}
-
-/* 100%;   } /* grid_12 */
-/* line 38, ../scss/_grid.scss */
-.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
-  position: relative;
+  width: 5.71429%;
   float: left;
-  margin-left: 2.762430939%;
+  margin-right: 2.85714%;
+  display: inline;
 }
 
-/* line 44, ../scss/_grid.scss */
+/* line 17, ../scss/_grid.scss */
+.twocol {
+  width: 14.28571%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 18, ../scss/_grid.scss */
+.threecol {
+  width: 22.85714%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 19, ../scss/_grid.scss */
+.fourcol {
+  width: 31.42857%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 20, ../scss/_grid.scss */
+.fivecol {
+  width: 40%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 21, ../scss/_grid.scss */
+.sixcol {
+  width: 48.57143%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 22, ../scss/_grid.scss */
+.sevencol {
+  width: 57.14286%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 23, ../scss/_grid.scss */
+.eightcol {
+  width: 65.71429%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 24, ../scss/_grid.scss */
+.ninecol {
+  width: 74.28571%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 25, ../scss/_grid.scss */
+.tencol {
+  width: 82.85714%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 26, ../scss/_grid.scss */
+.elevencol {
+  width: 91.42857%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 27, ../scss/_grid.scss */
+.twelvecol {
+  width: 100%;
+  float: left;
+  margin-right: 2.85714%;
+  display: inline;
+}
+
+/* line 29, ../scss/_grid.scss */
+.twoOfTen {
+  width: 17.24138%;
+  float: left;
+  margin-right: 3.44828%;
+  display: inline;
+}
+
+/* line 30, ../scss/_grid.scss */
+.fiveOfTen {
+  width: 48.27586%;
+  float: left;
+  margin-right: 3.44828%;
+  display: inline;
+}
+
+/* line 31, ../scss/_grid.scss */
+.eightOfTen {
+  width: 79.31034%;
+  float: left;
+  margin-right: 3.44828%;
+  display: inline;
+}
+
+/* line 33, ../scss/_grid.scss */
 .first {
   margin-left: 0;
 }
 
-/* line 48, ../scss/_grid.scss */
+/* line 37, ../scss/_grid.scss */
 .last {
   float: right;
+  margin-right: 0;
+  *margin-left: -2em;
+  display: inline;
 }
 
 /******************************************************************

@@ -8,7 +8,7 @@
       <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
     </header> <!-- end article header -->
 
-    <div id="main" class="eightcol first clearfix" role="main">
+    <div id="main" class="sevencol first clearfix" role="main">
 
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

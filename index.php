@@ -10,7 +10,7 @@
 
       <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-        <header class="article-header first elevencol">
+        <header class="article-header first eightOfTen">
 
           <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
           <p class="byline vcard"><?php
@@ -18,7 +18,7 @@
                                   ?></p>
 
         </header> <!-- end article header -->
-        <div class="onecol last">
+        <div class="twoOfTen last">
           <span class="meta comments">
             <?php if ( post_password_required() ) : ?>
             <span class="c"><em>X</em></span>
@@ -29,13 +29,14 @@ comments_popup_link('<span class="n"><em>' . __('0', 'lb-lang') . '</em></span>'
         </div>
 
         <section class="entry-content clearfix clear">
-          <?php the_content(); ?>
+          <?php the_content(__('Read &amp; Comment &rsaquo;&rsaquo;&rsaquo;', 'bonestheme')); ?>
         </section> <!-- end article section -->
 
-        <footer class="article-footer">
-          <p class="posted_in"><?php echo __('Posted in: ', 'bonestheme'); the_category(', '); ?></p>
-          <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>
+        <footer class="article-footer clearfix">
+          <?php printf (__('<div class="posted_in fiveOfTen first"><h6>Posted in</h6> %s</div>', 'bonestheme'), get_the_category_list()); ?>
+          <?php the_tags(__('<div class="tags fiveOfTen last"><h6>Tags</h6>', 'bonestheme') . '<ul><li>','</li><li>','</li></ul></div>'); ?>
         </footer> <!-- end article footer -->
+        <div class="footer-bttn"></div>
 
         <?php // comments_template(); // uncomment if you want to use them ?>
 
